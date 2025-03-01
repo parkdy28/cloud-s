@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>점수 결과</title>
+</head>
+<body>
+    <div class="container">
+        <h1>계정 보안 점수</h1>
+<p>당신의 계정 보안 점수는 <span class="score"> {{ total_score }}점</span>입니다. <br>위험 수준: <span class="risk">{{ risk_level }}</span></p>
+
+        <!-- 로그아웃 버튼 -->
+        <a href="{{ url_for('dash.logout') }}" class="btn">로그아웃</a>
+
+        <!-- 암호화 페이지로 이동하는 버튼 -->
+        <form action="{{ url_for('score.encryption_redirect') }}" method="GET">
+            <button type="submit" class="encrypt-btn">암호분산저장</button>
+        </form>
+    </div>
+<!-- 출처 표기 -->
+<div class="attribution"> Image by <a href="https://www.freepik.com/free-vector/cloud-pattern-background-design_18385917.htm" target="_blank">Freepik</a>
+</div>
+</body>
+</html>
+

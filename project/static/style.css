@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #87CEEB; /* 하늘색 */
+    background-image: url('cloud.png'); 
+    background-repeat: repeat;
+    background-size: 150px 150px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 16px;
+    position: relative; /* 출처 */
+}
+
+/* 로그인 박스 */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* 입력 폼 레이블 */
+form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    display: block;
+    text-align: left;
+}
+
+/* 입력창 */
+form input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* 로그인 버튼 */
+button.btn {
+    background-color: #4682B4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+    background-color: #315a7d;
+}
+
+/* 오류 메시지 */
+#error-message, #error-message.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#error-message.success {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* 마이페이지 버튼 */
+.button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.button-container button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-container button:hover {
+    background-color: #218838;
+}
+
+/* 출처 표기 문구 위치 스타일 */
+.attribution {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 3px, 6px;
+    border-radius: 5px;
+    z-index: 9999;
+}
+.attribution a {
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+}
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+
+.encrypt-btn {
+    margin-top: 20px; 
+    padding: 10px 20px; 
+    background-color: #4682B4; /* 파란색 */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.encrypt-btn:hover {
+    background-color: #315a7d; 
+}
+
+
+
+.score {color: red;}
+
+.risk {color: red;}
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>로그인</h1>
+
+        <!-- 로그인 폼 -->
+        <form action="{{ url_for('dash.login') }}" method="POST">
+            <label for="name">아이디</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="password">비밀번호</label>
+            <input type="password" id="password" name="password" required>
+
+            {% if error %}
+                <div class="alert alert-danger">{{ error }}</div>
+            {% endif %}
+           
+            <button type="submit" class="btn">로그인</button>
+        </form>
+    </div>
+<!-- 출처 표기 -->
+<div class="attribution"> Image by <a href="https://www.freepik.com/free-vector/cloud-pattern-background-design_18385917.htm" target="_blank">Freepik</a>
+</div>
+</body>
+</html>
+

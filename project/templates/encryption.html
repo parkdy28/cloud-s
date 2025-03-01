@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>암호화 페이지</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>정보 암호화</h2>
+
+        <form id="encryptionForm" action="/enc/encrypt/encryption" method="post">
+            <label for="username">사용자 이름:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">비밀번호 (6자리 숫자):</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="btn">암호화 실행</button>
+        </form>
+
+        <!-- 결과 메시지 표시 영역 -->
+        <p id="resultMessage" style="display: none;"></p>
+
+        <!-- 마이페이지로 돌아가기 버튼 -->
+        <div class="button-container">
+            <button class="btn" onclick="location.href='{{ url_for('dash.dashboard') }}'">
+                마이페이지로 돌아가기
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("encryptionForm").onsubmit = async function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+            const response = await fetch(this.action, {
+                method: "POST",
+                body: formData
+            });
+
+            const resultMessage = document.getElementById("resultMessage");
+
+            if (response.ok) {
+                const data = await response.json();
+                resultMessage.textContent = "암호화가 완료되었습니다!";
+                resultMessage.style.color = "green";
+            } else {
+                const errorData = await response.json();
+                resultMessage.textContent = errorData.error;
+                resultMessage.style.color = "red";
+            }
+
+            resultMessage.style.display = "block";
+        };
+    </script>
+</body>
+</html>
