@@ -1,3 +1,4 @@
 # requirements.txt
 flask
 mysql-connector-python
+gunicorn==20.1.0
