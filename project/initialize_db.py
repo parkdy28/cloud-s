@@ -4,6 +4,7 @@ from mysql.connector import Error
 # MySQL 연결 설정
 DATABASE_CONFIG = {
     'host': 'localhost',
+    'port': '3306',
     'user': 'root',
     'password': 'alic0828*',  # 여기에 실제 MySQL 비밀번호 입력
     'database': 'account_management'
