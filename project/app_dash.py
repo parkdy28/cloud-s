@@ -6,7 +6,7 @@ dash_bp = Blueprint('dash', __name__, template_folder='templates')
 
 DATABASE_CONFIG = {
     'host': 'localhost',
-    'port': '3306'
+    'port': '3306',
     'user': 'root',
     'password': 'alic0828*',  # 실제 MySQL 비밀번호
     'database': 'account_management'
