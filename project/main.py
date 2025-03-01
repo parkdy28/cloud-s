@@ -12,5 +12,5 @@ app.register_blueprint(score_bp, url_prefix="/score")
 app.register_blueprint(enc_bp, url_prefix="/enc")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host"0.0.0.0", port=5000)
 
