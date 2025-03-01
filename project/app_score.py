@@ -5,7 +5,7 @@ from datetime import datetime
 score_bp = Blueprint('score', __name__, template_folder='templates')
 
 DATABASE_CONFIG = {
-    'host': 'localhost',
+    'host': '192.168.74.128',
     'port': '3306',
     'user': 'root',
     'password': 'alic0828*',  # 실제 MySQL 비밀번호
